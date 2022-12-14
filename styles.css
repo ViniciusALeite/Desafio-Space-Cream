@@ -1,0 +1,120 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root {
+
+    font-size: 62.5%;
+    --ff-heading: 'Staatliches', cursive;
+    --ff-texting: 'Palanquin', sans-serif;    
+
+    
+    --bg-one: hsla(218, 17%, 62%, 1);
+    --bg-two: hsla(312, 91%, 96%, 1);
+    --bg-three: hsla(233, 100%, 97%, 1);
+    --bg-four: hsla(275, 18%, 79%, 1);  
+    --bg-five: hsla(233, 100%, 97%, 1);  
+
+    --tc-one: hsla(274, 84%, 12%, 1);
+    --tc-two: hsla(232, 17%, 35%, 1);
+    --tc-three: hsla(232, 17%, 35%, 1);
+    --tc-four: hsla(0, 0%, 100%, 1);
+
+}
+body {
+    display: flex;
+    justify-content: center;
+    background-color: #E5E5E5;
+}
+.page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 38.4rem;
+    background-color: var(--bg-three);
+}
+header {
+    background-color:var(--bg-one);
+    width: 38.4rem;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+}
+header h1 {
+    color:var(--tc-four);
+    background-color:var(--bg-four);
+    font-family: var(--ff-heading);
+    font-weight: 400;
+    font-size: 4.0rem;
+    line-height: 3.4rem;
+    text-transform: uppercase;
+    margin-bottom: 2.9rem;
+    text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
+    padding: 0.8rem 8.6rem 0.7rem 8.6rem;
+}
+header img {
+    width: 13.7rem;
+    height: 13.7rem;
+    object-fit: contain;
+    margin: 3.2rem 12.3rem 3.2rem 12.3rem;
+}
+main {
+    width: 32rem;
+    display: grid;
+    text-align: center;
+    flex-direction: column;
+    gap: 3.6rem;  
+}
+main p {
+    font-family: var(--ff-texting);
+    color: var(--tc-one);
+    font-size: 2rem;
+    line-height: 2rem;
+    margin: 1.4rem 0 6.3rem;  
+    text-align: center; 
+    width: 30.5rem;
+}
+main img {
+   border-radius: 2rem;   
+   object-fit: cover;
+}
+.card {
+    position: relative;
+    animation: downToTop 600ms 300ms reverse backwards;  
+}
+.card img {
+    transition-property: all 200ms;   
+}
+.card img:hover {
+    transform: scale(1.1);
+    opacity: 0.8;
+}
+.card h2 {
+
+    font-family: var(--ff-heading);
+    letter-spacing: 0.05em;
+    font-size: 2rem;
+    line-height: 3.4rem;
+    font-weight: 400;
+    color:var(--tc-three);
+
+    background-color:var(--bg-two);
+    width: 11.2rem;
+    height: auto;
+    border-radius: 2rem;
+
+    position: absolute;
+    top: 1.6rem;
+    right: 1.6rem;
+    justify-content: center;
+
+}
+
+@keyframes downToTop {
+    100% {
+        opacity: 0;
+        transform: translateY(20px);
+    }    
+}
